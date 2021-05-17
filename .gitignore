@@ -8,8 +8,13 @@ x64/
 *.user
 *.suo
 
+.idea/
+
 *.cmake
 Makefile
 CMakeFiles/
 CMakeCache.txt
 DLL/
+
+include/RakNet/
+cmake-build-*/
