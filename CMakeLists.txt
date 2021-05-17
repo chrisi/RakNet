@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.6)
 
 project(RakNet)
 
+set(CMAKE_BUILD_TYPE Release)
+
 if( NOT APPLE )
 # check 64 bit
 if( CMAKE_SIZEOF_VOID_P MATCHES "4" )
@@ -25,10 +27,10 @@ ENDIF(WIN32 AND NOT UNIX)
 set(CMAKE_DEBUG_POSTFIX "_d")
 
 # Options
-option( RAKNET_ENABLE_SAMPLES 	"Generate RakNet sample projects if true." 		TRUE  )
-option( RAKNET_ENABLE_DLL		"Generate the DLL project if true." 			TRUE )
+option( RAKNET_ENABLE_SAMPLES 	"Generate RakNet sample projects if true." 		FALSE  )
+option( RAKNET_ENABLE_DLL		"Generate the DLL project if true." 			FALSE )
 option( RAKNET_ENABLE_STATIC	"Generate the static library project if true." 	TRUE )
-option( RAKNET_GENERATE_INCLUDE_ONLY_DIR "Setup a include/RakNet/ directory in which all the headers are copied." FALSE )
+option( RAKNET_GENERATE_INCLUDE_ONLY_DIR "Setup a include/RakNet/ directory in which all the headers are copied." TRUE )
 
 set( RAKNETHEADERFILES ${RakNet_SOURCE_DIR}/Source ) #This name doesn't follow CMake conventions but for retro compatibility I'll let it there.
 

@@ -22,7 +22,7 @@
 
 
 #elif !defined ( __APPLE__ ) && !defined ( __APPLE_CC__ ) && !defined ( __PPC__ ) && !defined ( __FreeBSD__ ) && !defined ( __S3E__ )
-#include <sys/io.h>
+//#include <sys/io.h>
 #endif
 
 
