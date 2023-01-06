@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.6)
 
 project(RakNet)
 
-set(CMAKE_INSTALL_PREFIX "/home/chrisi")
+set(CMAKE_INSTALL_PREFIX "$ENV{GTI_CMAKE_REPO}")
 
 set(CMAKE_BUILD_TYPE Release)
 
