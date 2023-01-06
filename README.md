@@ -1,5 +1,26 @@
+Chrisi's fork of Larku's RakNet fork
+===================================
+
+This fork contains some additional minor changes addressing further compilation issues 
+on Linux and R-Pi as well as usage issues in conjuction with the BMS RTT exporter.
+
+## Download
+
+	git clone https://github.com/chrisi/RakNet.git
+
+## Build
+
+    mkdir build 
+    cd build
+    cmake -DDISABLEDEPENDENCIES=TRUE ../
+    make
+
+## Install
+    
+    make install
+
 Larku's fork of RakNet 4.081
-============
+============================
 
 Copyright (c) 2014, Oculus VR, Inc.
 
