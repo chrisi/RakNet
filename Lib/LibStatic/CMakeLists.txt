@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.16)
 project(RakNetLibStatic)
 
 file(GLOB ALL_HEADER_SRCS ${RakNet_SOURCE_DIR}/Source/*.h)
@@ -32,4 +32,9 @@ ELSE (WIN32 AND NOT UNIX)
 #    install(TARGETS RakNetLibStatic DESTINATION ${RakNet_SOURCE_DIR}/Lib/RakNetLibStatic)
 ENDIF (WIN32 AND NOT UNIX)
 
-install(TARGETS RakNetLibStatic ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(TARGETS RakNetLibStatic
+        EXPORT RakNetTargets
+        ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+        INCLUDES DESTINATION "include/raknet"
+        PUBLIC_HEADER DESTINATION "include/raknet"
+)

@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.16)
 
 option( RAKNET_SAMPLE_AutopatcherClient "" True )
 #option( RAKNET_SAMPLE_AutopatcherClientGFx3_0 "" True )

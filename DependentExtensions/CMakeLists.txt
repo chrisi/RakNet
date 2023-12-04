@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.16)
 
 option( RAKNET_ENABLE_EXTENSIONS 				"Enable extension projects that might need specific dependencies." TRUE )
 option( RAKNET_EXTENSION_USEMYSQL 				"Enable extensions using MySQL" 		TRUE )
