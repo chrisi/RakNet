@@ -17,7 +17,7 @@ endif ()
 
 file(GLOB ALL_HEADER_SRCS ${RakNet_SOURCE_DIR}/Source/*.h)
 install(FILES ${ALL_HEADER_SRCS}
-        DESTINATION ${CMAKE_INSTALL_PREFIX}/include/raknet
+        DESTINATION "include/raknet"
 )
 
 install(EXPORT ${PROJECT_NAME}Targets
@@ -41,3 +41,12 @@ install(FILES
         ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake
         DESTINATION lib/cmake/${PROJECT_NAME}
 )
+
+set(CPACK_GENERATOR "DEB")
+set(CPACK_PACKAGE_NAME ${CMAKE_PROJECT_NAME})
+set(CPACK_PACKAGE_VENDOR "GTIDEV")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Christian Gebauer")
+
+set(CPACK_PACKAGE_FILE_NAME "raknet") #provide a static name for curl upload in Jenkinsfile
+
+include(CPack)

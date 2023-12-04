@@ -34,7 +34,7 @@ ENDIF (WIN32 AND NOT UNIX)
 
 install(TARGETS RakNetLibStatic
         EXPORT RakNetTargets
-        ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+        ARCHIVE DESTINATION "lib"
         INCLUDES DESTINATION "include/raknet"
         PUBLIC_HEADER DESTINATION "include/raknet"
 )
